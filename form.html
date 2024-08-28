@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <title>Document</title>
+
+    <style>
+        *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+
+body{
+    background-image: radial-gradient(whitesmoke, white);
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    background-color: white;
+}
+
+.nav-bar{
+    display: flex;
+    height: 15vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px 0px 30px;
+    filter: blur();
+}
+
+.logo{
+    color: #012549;
+    font-weight: 900;
+    font-size: 2em;
+    cursor: default;
+}
+
+.logo:hover{
+    color: #07CCA1;
+}
+
+.nav-elements{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.normal:hover{
+    color: #07CCA1;
+}
+
+.subscribe{
+    background-color: #07CCA1;
+    padding: 10px 25px 10px 25px;
+    border-radius: 1px;
+    font-size: 20px;
+    border: 2px solid #07CCA1;
+    color: white;
+    font-weight: 600;
+}
+
+.subscribe:hover{
+    box-shadow: 1px 1px #07CCA1;
+}
+
+a{
+    text-decoration: none;
+}
+
+.table-container{
+    position: relative;
+    padding: 20px;
+    top: 10vh;
+    width: 60vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    border-radius: 18px;
+    background: #e0e0e0;
+    box-shadow:  19px 19px 45px #cecece,
+             -19px -19px 45px #f2f2f2;
+
+}
+
+header>h1{
+    position: relative;
+    top: 4vh;
+    font-size: 2em;
+}
+
+.form-container{
+    position: relative;
+    top: 40vh;
+    width: 60vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 120vh;
+    border-radius: 18px;
+    background: #e0e0e0;
+    box-shadow:  19px 19px 45px #cecece,
+             -19px -19px 45px #f2f2f2;
+
+}
+
+.instruction-table{
+    position: relative;
+    top: 8vh;
+    width: 90%;
+
+}
+
+.field{
+    width: 20%;
+    font-size: 1.5em;
+}
+
+.description{
+    width: auto;
+    font-size: 1.5em;
+}
+
+.odd-rows{
+    padding: 30px;
+    background-color: #15d7ad25;
+}
+
+.odd-rows td{
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+
+.even-rows{
+    background-color: #15d7ad6d;
+    padding: 30px;
+}
+.even-rows td{
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.welcome>h1{
+    position: relative;
+    top: 4vh;
+    font-size: 2em;
+}
+
+.form-table{
+    position: relative;
+    top: 8vh;
+    width: 90%;
+
+}
+
+.row{
+    padding: 30px;
+}
+.row td{
+    padding: 10px;
+    width: 50%;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+input{
+    padding: 1em;
+    width: 100%;
+    background-color: #E6F0F0;
+    border-radius: 12px;
+    color: #07CCA1;
+    border: 2px solid #07CCA1;
+    cursor:pointer;
+    
+}
+
+select{
+    padding: 1em;
+    width: 100%;
+    background-color: #E6F0F0;
+    border-radius: 12px;
+    color: #07CCA1;
+    border: 2px solid #07CCA1;
+    cursor:pointer;
+}
+
+textarea{
+    padding: 10px;
+    width: 100%;
+    height: 30vh;
+    background-color: #E6F0F0;
+    border-radius: 12px;
+    color: #07CCA1;
+    border: 2px solid #07CCA1;
+    cursor:pointer;
+}
+
+.submit{
+    background-color: #07CCA1;
+    width: 50%;
+    padding: 10px 25px 10px 25px;
+    border-radius: 1px;
+    font-size: 20px;
+    border: 2px solid #07CCA1;
+    color: white;
+    font-weight: 600;
+}
+
+footer{
+    position: relative;
+    top: 50vh;
+    height: 20vh;
+    align-content: center;
+    background: #e0e0e0;
+    box-shadow:  19px 19px 45px #cecece,
+             -19px -19px 45px #f2f2f2;
+}
+
+footer>p{
+    font-size: 4vh;
+    text-align: center;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <section class="nav-container">
+        <nav class="nav-bar">
+            <div class="logo">
+                <span>M&G</span>
+            </div>
+
+            <div class="nav-elements">
+                <span class="normal">About</span>
+                <a href="#form"><span class="subscribe">Subscribe</span></a>
+            </div>
+        </nav>
+    </section>
+    <main class="main-container">
+
+        <section class="table-container">
+            <header class="instructions">
+                <h1>Instructions</h1>
+            </header>
+            <table class="instruction-table">
+                <tr class="header-row even-rows">
+                    <th class="field">Field</th>
+                    <th class="description">Description</th>
+                </tr>
+
+                <tr class="rows odd-rows">
+                    <td class="name">Name</td>
+                    <td>Must contain only alphabets (Uppercase or lowercase) and only blank spaces.</td>
+                </tr>
+                <tr class="rows odd-rows">
+                    <td class="email">Email</td>
+                    <td>Must a string of alphabets, numbers and only @ and . as a special character.</td>
+                </tr>
+                <tr class="rows odd-rows">
+                    <td class="password">Password</td>
+                    <td>Must contain alphabets(uppercase and lowercase), numbers and special characters.To maintain strict privacy we recomment you to use a strong password.</td>
+                </tr>
+                <tr class="rows odd-rows">
+                    <td class="text-area">Comments</td>
+                    <td>Write your queries in the text-box availabe under comments section.</td>
+                </tr>
+            </table>
+        </section>
+
+        <form class="form-container" id="form">
+            <header class="welcome"><h1>Welcome!</h1></header>
+            <table class="form-table">
+
+                <tr class="row">
+                    <td>
+                        <input required type="text" placeholder="First Name" id="name" name="name">
+                    </td>
+                    <td>
+                        <input required type="text" placeholder="Last Name" id="name" name="name">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td colspan="2" class="email" id="e-mail"><input type="email" placeholder="Email" id="email" name="email"></td>
+                </tr>
+                <tr class="row">
+                    <td colspan="2" class="password" id="password">
+                        <input required type="password" placeholder="Password" id="password" name="password"></td>
+                </tr>
+                <tr class="row">
+                    <td>
+                        <select required name="gender" id="gender" aria-placeholder="Gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        </select> 
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td>
+                        <input required type="number" min="18" max="100" name="age" id="age" placeholder="Age">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td colspan="2">
+                        <input required type="text" name="address" id="address" placeholder="Address">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td colspan="2">
+                        <h4>Comments</h4>
+                        <textarea name="Comments" id="comments">
+                        </textarea>
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td>
+                        <input class="submit" type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+    <footer>
+        <p>Copyright property of M&G</p>
+    </footer>
+</body>
+</html>
